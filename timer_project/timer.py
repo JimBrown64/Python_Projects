@@ -7,6 +7,9 @@ import winsound
 local_time = time.ctime()
 keyboard = Controller()
 
+def cur_time():
+    print(local_time)
+
 def worktimer(*args):
     try:
         set_time = float(time_entry.get())*60
@@ -40,3 +43,4 @@ ttk.Label(mainframe, text="Task").grid(column=3, row=2, sticky=W)
 ttk.Button(mainframe, text="start timer", command= worktimer).grid(column=3, row=3, sticky=W)
 
 root.mainloop()
+# cur_time()
